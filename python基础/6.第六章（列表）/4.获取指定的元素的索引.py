@@ -19,5 +19,5 @@ print(lst.index('hello'))     #注意index后面是.而不是,
 lst2=['hello','world',98,'hello']   #如查列表中存在N个相同元素，只返回相同元素中的第一个元素的索引
 print(lst2.index('hello'))
 #print(lst2.index('python'))         #如果查询的元素在列表中不存在，则会抛出ValueError
-#print(lst2.index('hello',1.什么叫模块_模块化编程的好处,3))      #还可以在指定的start和stop之间进行查找,ValueError: 'hello' is not in list
+#print(lst2.index('hello',1,3))      #还可以在指定的start和stop之间进行查找,ValueError: 'hello' is not in list
 print(lst2.index('hello',1,4))       #还可以在指定的start和stop之间进行查找

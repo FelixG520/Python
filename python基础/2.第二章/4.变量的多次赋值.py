@@ -4,14 +4,14 @@
 
 
 #当多次赋值后，变量名会指向新的空间
-name='高先生'       #由于没被输出成为内存垃圾
-name='高老板'
+name='Felix'       #由于没被输出成为内存垃圾
+name='Felix_G'
 print(name)
 
 #可以分别输出
-name='高公子'
+name='Felix'
 print(name)
-name='高先生'
+name='Felix_G'
 print(name)
 
 

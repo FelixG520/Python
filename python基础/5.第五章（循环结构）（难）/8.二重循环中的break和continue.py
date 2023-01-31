@@ -13,7 +13,7 @@ print('------------break--------------')
 for i in range(5):       #代表外层循环要执行5次
     for j in range(1,11):
         if j%2==0:
-            break    #跳出循环
+            break    #跳出本层循环，不会影响外层循环
         print(j)
 
 
@@ -37,8 +37,17 @@ for i in range(5):  # 代表外层循环要执行5次
             continue  #Ture，继续循环;False，换行
         print(j,end=('\t'))
     print()
+print()
 
 
+
+for i in range(5):  # 代表外层循环要执行5次
+    for j in range(1, 11):
+        if j % 2 == 0:
+            continue  #Ture，继续循环;False，换行
+        else:
+            print(j,end=('\t'))
+    print()
 
 
 '''************************

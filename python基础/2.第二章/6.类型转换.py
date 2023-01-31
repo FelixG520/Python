@@ -4,12 +4,14 @@
                                        #数据类型转换
 #为什么要进行数据类型转换？
    #将不同数据类型的数据拼接在一起
-name='高公子'
+
+name='Felix'
 age=18
 print(type(name),type(age))#说明name与age的数据类型不同
 #print('我叫'+name+'今年,'+age+'岁')#当str类型与int类型进行连接时，报错
+
 # 解决方案：类型转换
-print('我叫'+name+'今年,'+str(age)+'岁')
+print('我叫'+name+',今年'+str(age)+'岁')# + -->连接符
 
 print('----------str()将其他类型转成str类型------------')
 a=10

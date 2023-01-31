@@ -35,7 +35,7 @@ print(n1+n2)#输出3.3000000000000003计算机采用二进制进行存储，因�
 #解决方案
 #导入模块decimal
 from decimal import Decimal
-print(Decimal('1.什么叫模块_模块化编程的好处.1.什么叫模块_模块化编程的好处')+Decimal('2.2'))
+print(Decimal('1.1')+Decimal('2.2'))
 #不是所有的浮点数都会出现这种情况
 n3=2.1
 print(n1+n3)

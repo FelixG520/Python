@@ -34,3 +34,5 @@ else:              #非会员
         print('打九五折，付款金额为:',money*0.95)
     else:
         print('不打折，付款金额为:',money)
+
+

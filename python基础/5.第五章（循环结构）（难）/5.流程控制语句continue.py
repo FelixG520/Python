@@ -17,7 +17,12 @@ for item in range(1,51):
 print('------------使用continue-----------------')
 for item in range(1,51):
     if item%5!=0:    #也可以用 if item%5:
-        continue
+        continue#如果满足条件跳出循环
     print(item)
 
 
+for item in range(1,51):
+    if item%5!=0:    #也可以用 if item%5:
+        continue#如果满足条件跳出循环
+    else:
+        print(item)

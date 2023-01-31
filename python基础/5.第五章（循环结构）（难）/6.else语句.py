@@ -15,7 +15,7 @@ for item in range(3):
         break
     else:
         print('密码不正确')
-else:
+else:#这个else和for搭配的
     print('对不起，三次密码均输入错误')
 
 

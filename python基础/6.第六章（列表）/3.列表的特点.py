@@ -15,6 +15,7 @@ print(lst1[0])
 print(lst1[1])
 print(lst1[-1])
 print(lst1[-3])
+print()
 
 lst1=['hello','world',98,'hello']   #列表可以存储重复数据
 print(lst1[-1])

@@ -17,25 +17,30 @@
 
 print('--------------step为正数的情况----------------')
 lst=[10,20,30,40,50,60,70,80]
-#start=1.什么叫模块_模块化编程的好处,stop=6,step=1.什么叫模块_模块化编程的好处
+
+#start=1,stop=6,step=1
 print(lst[0:6:1])
 print('原列表',id(lst))    #原列表片段的拷贝[20,30,40,50,60]
 lst2=lst[1:6:1]
-print('切的片段:',id(lst2))
+print('切的片段:',id(lst2))#切出来的是新的列表对象
+
 print(lst[1:6])    #step默认为1——>简写为[start,stop]
 print(lst[1:6:])   #step默认为1——>简写为[start,stop]
-#start=1.什么叫模块_模块化编程的好处,stop=6,step=2
+
+#start=1,stop=6,step=2
 print(lst[1:6:2])
+
 #stop=6,step=2,start不写，采用默认
 print(lst[:6:2])   #默认从0开始[10, 30, 50]
-#start=1.什么叫模块_模块化编程的好处,step=2，stop不写，采用默认到最后一个元素
+
+#start=1,step=2，stop不写，采用默认到最后一个元素
 print(lst[1::2])   #[20, 40, 60, 80]
 
 
 print('--------------step为负数的情况----------------')
 print('原列表',lst)
 print(lst[::-1])
-#start=7，stop省略，step=-1.什么叫模块_模块化编程的好处
+#start=7，stop省略，step=-1
 print(lst[7::-1])       #从索引为7的元素开始往前计算切片
 #start=6，stop=0，step=-2
 print(lst[6:0:-2])      ##从索引为6的元素开始往前计算切片
