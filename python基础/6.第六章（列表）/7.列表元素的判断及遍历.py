@@ -5,7 +5,7 @@
 
 print('p' in 'python')      #True
 print('k' not in 'python')  #True
-
+print()
 
 lst=[10,20,'python','hello']
 print(10 in lst)

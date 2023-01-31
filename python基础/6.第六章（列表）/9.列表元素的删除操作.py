@@ -18,7 +18,10 @@
                   ·清空列表
           ·del
                   ·删除列表'''
+
+
 lst=[10,20,30,40,50,60,30]
+print('删除一个具体的元素 ----- remove')
 lst.remove(30)   #从列表中移除一个元素，如果有重复元素,只移第一个
 print(lst)
 #lst.remove(100)   ValueError: list.remove(x): x not in list
@@ -26,7 +29,7 @@ print(lst)
 
 
 #pop()删除一个指定索引位置上的元素
-print('删除一个指定索引位置上的元素')
+print('删除一个指定索引位置上的元素 ----- pop')
 lst.pop(1)
 print(lst)
 #lst.pop(5)      IndexError: pop index out of range
