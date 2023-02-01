@@ -16,7 +16,7 @@ scores= {'张三':100,'李四':98,'王五':45}
 print('------------------获取所有的key--------------------')
 keys=scores.keys()
 print(keys)
-print(type(keys))
+print(type(keys))  #dict_key类型 -- 键类型
 print(list(keys))     #将所有的key组成的视图转成列表
 
 
@@ -24,13 +24,14 @@ print(list(keys))     #将所有的key组成的视图转成列表
 print('------------------获取所有的value--------------------')
 values=scores.values()
 print(values)
-print(type(values))
-print(list(keys))
+print(type(values))  #dict_values类型 -- 值类型
+print(list(values))
 
 
 #获取所有的key-value值
 print('------------------获取所有的key-value值--------------------')
 items=scores.items()
 print(items)
+print(type(items))  #dict_items -- 键值对类型
 print(list(items))    #转换之后的列表元素是由元组组成
 

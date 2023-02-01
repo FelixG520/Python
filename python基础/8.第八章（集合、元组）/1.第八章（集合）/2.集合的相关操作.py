@@ -31,6 +31,8 @@ print(100 not in a)
 print('------------------集合元素的新增操作--------------------')
 a.add(80)      #add()一次添加一个元素
 print(a)
+
+#添加元素[]{}()都可以
 a.update({200,400,300})     #update()一次至少添加一个元素
 print(a)
 a.update([100,99,8])
@@ -43,10 +45,15 @@ print('------------------集合元素的删除操作--------------------')
 a.remove(100)
 print(a)
 #a.remove(500)    KeyError: 500
+
 a.discard(500)     #有就删，没有也不抛异常
 print(a)
+
 a.pop()            #一次只删除一个任意元素
 print(a)
 #a.pop(400)        TypeError: pop() takes no arguments (1.什么叫模块_模块化编程的好处 given)
+
 a.clear()           #清空集合
 print(a)
+
+del a

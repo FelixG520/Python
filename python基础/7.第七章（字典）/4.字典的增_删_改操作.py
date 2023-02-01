@@ -10,6 +10,7 @@ print('张三' not in scores)
 
 del scores['张三']  #删除指定的key-valu对
 print(scores)
+#del scores   直接把字典删除
 scores.clear()     #清空字典的元素
 print(scores)
 
@@ -19,3 +20,5 @@ print(scores)
 
 scores['陈六']=100    #修改元素
 print(scores)
+
+

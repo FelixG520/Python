@@ -16,7 +16,7 @@
 s='hello,python'
 print('-------------isidentifier()  判断指定的字符串是不是合法的标识符-------------------')
 #合法的标识符(字母、数字、下划线)
-print('1.什么叫模块_模块化编程的好处.',s.isidentifier())          #False     ','不是合法的标识符
+print('1.',s.isidentifier())          #False     ','不是合法的标识符
 print('2.','hello'.isidentifier())    #True
 print('3.','张三_'.isidentifier())     #True
 print('4.','张三_123'.isidentifier())  #True

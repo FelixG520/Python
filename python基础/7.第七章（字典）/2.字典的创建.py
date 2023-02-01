@@ -21,6 +21,8 @@ print(type(score))
 student=dict(name='jack',age=20)
 print(student)
 
+score2= dict({'张三':100,'李四':98,'王五':45})
+print(score2)
 
 #空子典
 d={}

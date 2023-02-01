@@ -18,5 +18,7 @@ print(scores['张三'])
 
 #第二种方式，使用get()方法
 print(scores.get('张三'))
+print(type(scores.get('张三')))
+
 print(scores.get('陈六'))       #None
 print(scores.get('麻七',99))    #99是在查找‘麻七’所对的value不存在时，提供的一个默认值

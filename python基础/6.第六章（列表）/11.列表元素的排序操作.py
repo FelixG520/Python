@@ -7,6 +7,8 @@
          ·调用sort（）方法，列表中有的所有元素默认按照从小到大的顺序进行排序，可以指定reverse=Ture进行降序排序
          ·调用内置函数sorted（），可以指定reverse=Ture，原列表不发生改变'''
 
+
+#调用内置函数sort（），可以指定reverse=Ture，对原列表进行排序，原列表不发生改变
 lst=[20,40,10,98,54]
 print('排序前的列表',lst,id(lst))
 #开始排序，调用列表对象的sort方法，升序排序
@@ -22,7 +24,7 @@ lst.sort(reverse=False)
 print(lst)
 
 
-#调用内置函数sorted（），可以指定reverse=Ture，原列表不发生改变
+#调用内置函数sorted（），可以指定reverse=Ture，将产生一个新的列表对象
 print('-----------------调用内置函数sorted（）,将产生一个新的列表对象-------------------')
 lst=[20,40,10,98,54]
 print('原序列',lst)

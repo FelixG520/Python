@@ -9,6 +9,8 @@ s2={20,30,40,50,60}
 #交集intersection()     &
 print('------------交集&--------------')
 print(s1.intersection(s2))
+print(s2.intersection(s1))
+
 print(s1 & s2)          #intersection()与&等价
 print(s1)
 print(s2)               #原集合没有发生任何改变

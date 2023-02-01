@@ -7,7 +7,9 @@
      ·字典中的元素是无序的
      ·字典中的key必须是不可变对象
      ·中的也可以根据需要动态地伸缩
-     ·字典会浪费较大的内存，是一种使用空间换时间的数据结构'''
+     ·字典会浪费较大的内存，是一种使用空间换时间的数据结构
+
+'''
 
 
 
@@ -17,6 +19,7 @@ print(d)
 
 d={'name':'张三','nikename':'张三'}   #value可以重复
 print(d)
+print(d['name'])
 
 #字典中的元素是无序的：字典可以在指定位置插入对象，而字典不可以，它会根据字典的value计算应该插入到哪
 lst=[10,20,30]
@@ -24,5 +27,5 @@ lst.insert(1,100)
 print(lst)
 
 
-#d= {lst:100}    #字典中的key必须是不可变对象,而lst是列表，是可变的。TypeError: unhashable type: 'list'
+d= {lst:100}    #字典中的key必须是不可变对象,而lst是列表，是可变的。TypeError: unhashable type: 'list'
 print(d)

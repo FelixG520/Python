@@ -6,7 +6,7 @@
 
 '''列表生成式：生成列表的公式
      ·语法格式：
-       [i*i for i in range(1.什么叫模块_模块化编程的好处,10)]
+       [i*i for i in range(1,10)]
          ·i*i    表示列表元素的表达式
          ·i      自定义变量
          ·range（）可迭代对象
@@ -15,7 +15,9 @@
 
 
 for i in range(10):
-    print(i)
+    print(i,end=' ')
+print()
+
 #放进列表里
 lst=[i for i in range(10)]
 print(lst)

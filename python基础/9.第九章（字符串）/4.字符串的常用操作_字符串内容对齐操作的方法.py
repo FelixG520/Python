@@ -13,10 +13,13 @@
 s='hello,python'
 #居中
 print(s.center(20,'*'))    #12个字符，给的宽度是20，因此左右两边各填充(20-12)/2=4个字符
+print(s.center(20))
 #左对齐
 print(s.ljust(20,'*'))     #只填充右侧
+print(s.ljust(20))
 #右对齐
 print(s.rjust(20,'*'))     #只填充左侧
+print(s.rjust(20))
 #填充符不写默认填充空格
 print(s.center(20))
 print(s.ljust(20))
@@ -24,7 +27,7 @@ print(s.rjust(20))
 
 
 
-print('--------------------如果设置宽度小于实际宽度则刈眶回原字符串------------------------')
+print('--------------------如果设置宽度小于实际宽度则返回回原字符串------------------------')
 print(s.center(10,'*'))
 print(s.ljust(11,'*'))
 print(s.rjust(9,'*'))
