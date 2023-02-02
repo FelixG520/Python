@@ -30,7 +30,7 @@ print('5.','\t'.isspace())    #Ture
 print('------------isalpha()   判断指定的字符串是否全部由字母组成-----------------')
 print('6.','abc'.isalpha())     #Ture
 print('7.','张三'.isalpha())     #Ture
-print('8.','张三1'.isalpha())    #False     '1.什么叫模块_模块化编程的好处‘不是字母
+print('8.','张三1'.isalpha())    #False     '1‘不是字母
 
 
 print('------------isdecimal()  判断指定字符串是否全部由十进制的数字组成------------------')

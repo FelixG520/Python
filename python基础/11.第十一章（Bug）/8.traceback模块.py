@@ -4,7 +4,7 @@
 
 
 #print(10/0)
-import  traceback
+import traceback
 try:
     print('--------------------------------')
     print(1/0)

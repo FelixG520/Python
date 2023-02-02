@@ -38,6 +38,6 @@ print(id(stu1))        #3029073261472   换成16进制就是2C142D5F3A0
 print(type(stu1))      #<class '__main__.Student'>
 print(stu1)            #<__main__.Student object at 0x000002C142D5F3A0>
 print('-------------------------------------')
-print(id(Student))     #Student就是类对象
+print(id(Student))     #Student是类的名称
 print(type(Student))
 print(Student)

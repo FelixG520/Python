@@ -8,8 +8,8 @@
    ·字符串替换
      ·replace()   第1个参数指定被替换的子串,第2个参数指定替换子串的字符串,该方法返回替換后得到的字符串,替换前的字符串不发生变化,
                   调用该方法时可以通过第3个参数指定最大替换次数
-·字符串的合并
-   ·join()   将列表或元组中的字符串合并成一个字符串
+    ·字符串的合并
+       ·join()   将列表或元组中的字符串合并成一个字符串
 '''
 
 
@@ -19,13 +19,13 @@ s1='hello,Python,Python,Python'
 print(s1.replace('Python','Java',2))   #用Java换Python两次     hello,Java,Java,Python
 
 
-lst=['hello','Java','Python']
+lst=['hello','Java','Python'] #列表
 print('|'.join(lst))
-print(''.join(lst))
+print(' '.join(lst))
 
 
-t=('hello','Java','Python')
-print(''.join(t))
+t=('hello','Java','Python')  #元组
+print(' '.join(t))
 
 
-print('*'.join('Python'))    #P*y*t*h*o*n
+print('*'.join('Python'))    #字符串

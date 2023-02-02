@@ -12,13 +12,13 @@ lst=[{'rating':[9.7,2062397],'id':'1292052','type':['犯罪','剧情'],'title':'
 
 '''
 思路不清导致的问题解决方案
-1.什么叫模块_模块化编程的好处.使用print（）函数
+1.使用print（）函数
 2.使用“#”暂时注释部分代码'''
 
 print('---------使用print（）函数-----------')
 name=input('请输入你要查询的演员：')
 for item in lst:                  #遍历列表
-    for movie in item:
+    for movie in item:            #遍历字典
         #print(movie)   输出rating
         actors=movie['actors']
         #print(movie)   打印不出来，说明问题在前面

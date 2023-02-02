@@ -14,4 +14,4 @@ print(fib(6))
 
 #输出前六位数字
 for i in range(1,7):
-    print(fib(i))
+    print(fib(i),end=' ')

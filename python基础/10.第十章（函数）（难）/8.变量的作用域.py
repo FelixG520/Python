@@ -21,7 +21,7 @@ def fun(a,b):
 #print(a)   NameError: name 'a' is not defined
 
 
-name='高帆'     #name的作用范围为函数内部和外部都可以使用，称为全局变量
+name='张三'     #name的作用范围为函数内部和外部都可以使用，称为全局变量
 print(name)
 
 def fun2():

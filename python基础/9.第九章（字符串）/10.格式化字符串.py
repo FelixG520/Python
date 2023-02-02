@@ -6,12 +6,12 @@
 print('------------格式化字符串第一种方式，%作占位符---------------')
 name='张三'
 age=20
-print('我叫%s,今年%d岁' % (name,age))
+print('我叫%s,今年%d岁' % (name,age)) #(name,age)是元组
 
 
 
 print('------------格式化字符串第二种方式，{}作占位符---------------')
-print('我叫{0},今年{1}岁'.format(name,age))
+print('我叫{0},今年{1}岁'.format(name,age)) #format(name,age)是方法 {}里是索引
 
 
 print('------------格式化字符串第三种方式，f-string方法---------------')

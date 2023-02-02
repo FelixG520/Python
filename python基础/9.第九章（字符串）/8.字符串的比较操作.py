@@ -14,7 +14,7 @@
 print('apple'>'app')    #True
 print('apple'>'banana') #False   相当于97>98
 
-
+#比较的是其ordinal value(原始值) -- 类似ASCII码值
 print(ord('a'),ord('b'))
 print(chr(97),chr(98))
 print(ord('高'))
