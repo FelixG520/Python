@@ -24,7 +24,7 @@ class Person(object):                 #object可写可不写，Person继承了ob
 class Student(Person):
     def __init__(self,name,age,stu_no):
         super().__init__(name,age)   #super()是用来调用父类的一个方法
-        self.stu_no=stu_no
+        self.stu_no=stu_no    #self是Student类的对象
 
 class Teacher(Person):
     def __init__(self,name,age,teachofyear):
@@ -34,7 +34,7 @@ class Teacher(Person):
 stu=Student('张三',20,'1001')
 teacher=Teacher('李四',34,10)
 
-stu.info()
+stu.info()   #info是从Person类继承过来的
 teacher.info()
 
 
@@ -45,5 +45,5 @@ class A(object):
 class B(object):
     pass
 
-class C(A,B):
+class C(A,B):   #C有两个父类
     pass

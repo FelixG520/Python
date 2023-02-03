@@ -27,12 +27,12 @@ car=Car('宝马x5')
 car.start()
 print(car.brand)
 
-
+#封装的实现
 class Student:
     def __init__(self,age):
         self.set_age(age)
     def get_age(self):
-        return self.__age
+        return self.__age   #带__，不能在类的外部使用
     def set_age(self,age):
         if 0<=age<=120:
             self.__age=age
@@ -64,7 +64,7 @@ print(dir(stu))  #输出stu所有的属性和方法
 '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 
 '__weakref__', 'name', 'show']
 '''
-print(stu._Student__age)    #在类的外部可以通过  _Student__age进行访问
+print(stu._Student__age)    #在类的外部可以通过  _Student__age进行访问（_类名__实例属性）
 
 
 
@@ -72,4 +72,5 @@ print(stu._Student__age)    #在类的外部可以通过  _Student__age进行访
 '''
 君子协议
 掩耳盗铃，全靠自觉
-当遇见__时，说明不让访问，如果访问也行，就是不道德（狗头）'''
+当遇见__时，说明不让访问，如果访问也行，就是不道德（狗头）
+'''

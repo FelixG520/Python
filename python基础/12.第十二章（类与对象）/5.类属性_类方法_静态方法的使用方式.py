@@ -35,7 +35,7 @@ class Student:
 
 
 #类属性的使用方式
-#print(Student.native_place)
+print(Student.native_place)
 stu1=Student('张三',20)     #stu1,stu2是Student类的实例对象
 stu2=Student('李四',30)
 print(stu1.native_place)
