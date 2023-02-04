@@ -20,12 +20,35 @@ close():把缓冲区的内容写入文件,同时关闭文件,释放文件对象�
 
 #读
 file=open('c.txt','r')
-#print(file.read(2))   #读取两个字符，即“中国”
-#print(file.readline()) #从文本文件中读取一行内容
-print(file.readlines()) #把文本文件中每一行都作为独立的字符串对象,并将这些对象放入列表返会
+print(file.read(2))   #读取两个字符，即“中国”
+print(file.readline()) #从文本文件中读取一行内容
+print(file.readlines()) #把文本文件中每一行都作为独立的字符串对象,并将这些对象放入列表返回
 
 #写
-file.open('d.txt','a')
-#file.write('hello')
+file=open('d.txt','a')
+file.write('hello')
+lst=['java','go','c++','c']
+file.writelines(lst)
+file.close()
 
+
+#文件指针 -- seek
+file=open('c.txt','r')
+file.seek(2)#跳过2个字节，一个中文2个字节。跳过“中”，而从“国”开始走了
+print(file.read())
+file.close()
+
+
+#返回指针文件的当前位置 -- tell
+file=open('d.txt','r')
+print(file.read())
+print(file.tell())
+file.close()
+
+
+#把缓冲区的内容写入文件,但不关闭文件 -- flush
+file=open('e.txt','a')
+file.write('hello')
+file.flush()
+file.write('world')
 file.close()

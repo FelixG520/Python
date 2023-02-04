@@ -30,3 +30,5 @@ import copy
 computer3=copy.deepcopy(computer)
 print(computer,computer.cpu,computer.disk)
 print(computer3,computer3.cpu,computer3.disk)
+
+#深拷贝 直接把另一个对象的子对象和另一个对象都拷贝并且内存地址都变了

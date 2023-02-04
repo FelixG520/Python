@@ -22,13 +22,17 @@ file.write('Python')
 file.close()
 
 #a:以追加模式打开文件,如果文件不存在则创建,文件指针在文件开头,如果文件存在,则在文件末尾追加内容,文件指针在原文件末尾
-file=open('b.txt','a')
+file=open('b.txt','a')  #a -- 追加（add）
 file.write('Python')
 file.close()
 
 #b:以二进制方式打开文件,不能单独使用,需要与共它模式一起使用,rb,或者wb
-src_file=open('毕业合影.jpg','rb')
-target_file=open('copy毕业合影.jpg','wb')
-target_file.write(src_file.read())
-target_file.close()
+src_file=open('中分.jpg','rb')
+
+target_file=open('copy中分.jpg','wb')#wb -- 写二进制文件
+
+target_file.write(src_file.read())#边读边写
+
+target_file.close()#关闭文件
+
 src_file.close()

@@ -16,7 +16,7 @@ class c(a,b):   #c继承了a和b
         self.name=name
 #创建C类的对象
 x=c('Jack')    #x是C类型的实例对象
-print(x.__dict__)
+print(x.__dict__)#{'name': 'Jack'}
 
 
 #print(dir(object))
@@ -33,10 +33,12 @@ class D(A):
 #创建C类的对象
 x=C('Jack',20)      #x是C类型的实例对象
 print(x.__dict__)   #实例对象的属性字典
-print(C.__dict__)   #类对象的实例字典
+
+
+print('1',C.__dict__)   #类对象的实例字典
 print('-------------------------------')
-print(x.__class__)  #<class '__main__.C'>输出了对象所属的类
-print(C.__bases__)  #(<class '__main__.A'>, <class '__main__.B'>) C类的父类类型的元组
-print(C.__base__)   #<class '__main__.A'>输出第一个父类
-print(C.__mro__)    #类的层次结构C继承了A，继承了B，继承了object
-print(A.__subclasses__())  #A的子类的列表
+print('2',x.__class__)  #<class '__main__.C'>输出了对象所属的类
+print('3',C.__bases__)  #(<class '__main__.A'>, <class '__main__.B'>) C类的父类类型的元组
+print('4',C.__base__)   #<class '__main__.A'>输出第一个父类
+print('5',C.__mro__)    #类的层次结构C继承了A，继承了B，继承了object
+print('6',A.__subclasses__())  #A的子类的列表

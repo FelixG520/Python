@@ -12,7 +12,7 @@ __init__()对创建的对象进行初始化
 a=20
 b=100
 c=a+b   #两个整数类型的对象的相加操作
-d=a.__add__(b)
+d=a.__add__(b)#+就是__add__方法
 print(c)
 print(d)
 
@@ -22,6 +22,8 @@ class Student:
         self.name=name
     def __add__(self, other):
         return self.name+other.name   #如果不写这个TypeError: unsupported operand type(s) for +: 'Student' and 'Student'
+    def __len__(self):
+        return len(self.name)
 
 stu1=Student('张三')
 stu2=Student('李四')
@@ -35,3 +37,4 @@ print('----------------------------------------------')
 lst=[11,22,33,44]
 print(len(lst))   #len是内容函数的长度
 print(lst.__len__())
+print(len(stu1))

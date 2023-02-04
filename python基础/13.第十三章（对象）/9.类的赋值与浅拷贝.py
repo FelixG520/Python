@@ -20,19 +20,21 @@ class Computer:
     def __init__(self,cpu,disk):
         self.cpu=cpu
         self.disk=disk
-#(1.什么叫模块_模块化编程的好处).变量的赋值
+#(1).变量的赋值
 cpu1=CPU()       #<__main__.CPU object at 0x000001820F818550>   一个对象对应两个变量
 cpu2=cpu1        #<__main__.CPU object at 0x000001820F818550>
-print(cpu1)
-print(cpu2)
+print(cpu1,id(cpu1))
+print(cpu2,id(cpu2))
 
 #(2).类的浅拷贝
 print('-------------------------------------------')
 disk=Disk()   #创建一个硬盘类的对象
 computer=Computer(cpu1,disk)    #创建一个计算机类的对象
 
-#浅拷贝
+#浅拷贝 -- 浅拷贝就是快捷方式，深拷贝就是‘全备份’
 import copy
+print(disk)
 computer2=copy.copy(computer)
 print(computer,computer.cpu,computer.disk)
 print(computer2,computer2.cpu,computer2.disk)
+#computer1和computer2是不同的，但所包含的子对象是相同的

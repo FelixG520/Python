@@ -26,7 +26,7 @@ class Person: #默认继承object
 def fun(obj):
     obj.eat()
 #开始调用函数
-fun(Cat())
+fun(Cat())   #这里的Cat()是匿名对象，也可以是Cat().eat()
 fun(Dog())
 fun(Animal())
 print('-------------------------------')
