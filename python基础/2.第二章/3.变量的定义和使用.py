@@ -12,3 +12,39 @@ print(name)
 print('标识:',id(name))
 print('类型:',type(name))
 print('值:',name)
+
+
+'''
+- Python是一种动态类型的语言，变量的类型可以随时变化
+    ·使用内置函数type()可以查看变量的数据类型
+- 允许多个变量指向同一个值
+    ·使用内置函数id()可以返回变量所指的内存地址
+'''
+my_name='zhangsan'
+luck_number=6
+print(my_name,'的幸运数字为',luck_number)
+print('luck_number的数据类型是：',type(luck_number))
+
+#变量的值可以更改
+luck_number='123456789'
+print('luck_number的数据类型是：',type(luck_number))
+
+#多个变量指向同一个值
+no=number=1024
+print(no,number)
+print(id(no))
+print(id(number))
+
+'''
+变量的定义及使用
+·变量命名应遵循以下几条规则
+- 变量名必须是一个有效的标识符
+- 变量名不能使用Pvthon中的保留字
+- 慎用小写字母I和大写字母O
+- 应选择有意义的单词作为变量名
+·常量
+- 常量就是在程序运行过程中，值不能改变的量
+- Python中没有定义常量的保留字
+- 常量规定使用大写字母和下划线组成
+- 常量首次赋值后，还是可以被其他代码修改的
+'''

@@ -4,7 +4,14 @@
                                        #数据类型转换
 #为什么要进行数据类型转换？
    #将不同数据类型的数据拼接在一起
+'''
 
+数据类型之间的转换-隐式类型转换
+·通过数学运算可以隐式将int类型转成float类型
+'''
+a=10
+b=3
+print(a/b,type(a/b))
 name='Felix'
 age=18
 print(type(name),type(age))#说明name与age的数据类型不同
