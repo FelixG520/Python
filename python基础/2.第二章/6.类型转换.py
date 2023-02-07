@@ -52,3 +52,12 @@ print(float(s2),type(float(s2)))
 print(float(ff),type(float(ff)))
 #print(float(s3),type(float(s3)))   #字符串中的数据如果是非数字串，则不允许转换
 print(float(i1),type(float(i1)))
+
+
+print('----------chr()和ord()------------')
+print(ord('张'))   #unicode表 -- 24352
+print(chr(24352))
+
+print('十进制转十六进制：'+hex(24352))
+print('十进制转八进制：'+oct(24352))
+print('十进制转二进制：'+bin(24352))

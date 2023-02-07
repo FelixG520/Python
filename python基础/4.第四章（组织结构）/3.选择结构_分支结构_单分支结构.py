@@ -26,3 +26,20 @@ if money>=s:
    money=money-s
    print('取款成功，余额为：',money)
 
+n=98
+if n%2:
+   print(n,'为奇数')
+if not n%2:
+   print(n,'为偶数')
+
+flag=eval(input('请输入一个布尔类型的值'))
+if flag:
+   print('flag的值为True')
+
+if not flag:
+   print('flag的值为False')
+
+a=10
+b=5
+if a>b:max=a
+print('a和b的最大值为',max)

@@ -12,6 +12,17 @@
      4.布尔运算符
      5.位运算符'''
                                     #1.算数运算符
+'''
+算术运算符
+- 算术运算符的优先级
+    ·先乘除后加减
+    ·同级运算符从左到右进行计算
+    ·可以使用()调整计算的优先级
+-算术运算符优先级由高到低
+·第一级:**
+·第二级:*,/ ,%，//
+·第三级: +,-
+'''
 print('1.算数运算符')
 print('------------标准运算符-------------')
 print('1+1 =',1+1)   #加法运算
@@ -105,7 +116,7 @@ print(list1 is not list2) #True   list1的id与list2的id是不相等的
 
 
 
-                           #4.布尔运算符
+                           #4.布尔(逻辑)运算符
 print('4.布尔运算符')
 #布尔运算符:and、or、not、in、not in
 print('---------------布尔运算符--------------')
@@ -132,6 +143,38 @@ print('k' in s)       #False，k不在helloworld中
 print('w' not in s)   #False，w在helloworld中
 print('k' not in s)   #Ture，k不在helloworld中
 
+print('--------------------------------------------------')
+print(True and True)
+print(True and False)
+print(False and False)
+print(False and True)
+
+print('--------------------------------------------------')
+print(8>7 and 6>5)   #True and True
+print(8>7 and 6<5)   #True and False
+print(8<7 and 10/0)  #当第一个表达式为False时，不计算第二个表达式
+
+print('--------------------------------------------------')
+print(True or True)
+print(True or False)
+print(False or False)
+print(False or True)
+
+print('--------------------------------------------------')
+print(8>7 or 6>5)   #True or True
+print(8>7 or 6<5)   #True or False
+
+print('--------------------------------------------------')
+print(not True)
+print(not False)
+print(not(8>7))
+
+
+
+
+
+
+
 
                                      #5.位运算符
 #将数据转成二进制进行计算
@@ -144,6 +187,7 @@ print('5.位运算符')
 print('\'&按位与\',\'|按位或\'')
 print(4&8)    #都是1，结果数位才是1
 print(4|8)    #都是0，结果数位才是0
+print(~123)   #按位取反
 print(4<<1)   #向左移动一位，相当于乘以2
 print(4<<2)   #向左移动两位，相当于乘以4
 print(4>>1)   #向右移动一位，相当于除以2
