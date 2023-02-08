@@ -26,3 +26,14 @@ for item in range(1,51):
         continue#如果满足条件跳出循环
     else:
         print(item)
+
+#1-100偶数和
+s=0
+i=1
+while i<=100:
+    if i%2==1:
+        i+=1
+        continue #奇数跳过下面语句
+    s+=i
+    i+=1
+print(s)
