@@ -12,3 +12,17 @@ lst1=['hello','world',98]
 #创建列表的第二种方式，使用内置函数list（）
 lst2=list(['hello','world',98])
 print(lst2)
+
+lst3=list(range(1,10,2))
+print(lst3)
+
+print(lst3+lst1+lst2)
+print(lst3*3)
+
+print(len(lst3))
+print(max(lst3))
+print(min(lst3))
+
+lst4=list('helloworld')
+print(lst4.count('o'))
+print(lst4.index('o'))

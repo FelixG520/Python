@@ -17,3 +17,12 @@ print('------------遍历列表中的元素------------------')
 for item in lst:                #item为可迭代对象，字符串和列表为可迭代对象
     print(item)
 
+for item in range(len(lst)):
+    print(lst[item])
+
+#遍历循环for与enumerate()函数组合遍历元素和索引
+for index,item in enumerate(lst):   #默认序号从0开始
+    print(index,item)
+
+for index,item in enumerate(lst,10):   #序号从10开始
+    print(index,item)

@@ -11,8 +11,7 @@
          ·i      自定义变量
          ·range（）可迭代对象
      ·注意事项：表示列表元素的表达式中，通常包含自定义变量'''
-
-
+import random
 
 for i in range(10):
     print(i,end=' ')
@@ -24,7 +23,13 @@ print(lst)
 lst=[i*i for i in range(10)]
 print(lst)
 
+lst=[random.randint(1,100) for _ in range(10)]#用不到循环变量（item），就用_
+print(lst)
 #列表中的元素的值为2，4，6，8，10
 print('-------------列表中的元素的值为2，4，6，8，10-------------------')
 lst2=[i*2 for i in range(1,11)]
 print(lst2)
+
+#从列表中选择符合条件的元素组成新的列表
+lst=[i for i in range(10) if i%2==0] #0-10的偶数
+print(lst)

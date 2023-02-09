@@ -36,3 +36,17 @@ print(new_list)
 desc_list=sorted(lst,reverse=True)
 print(desc_list)
 
+lst2=['banana','apple','Cat','Orange']
+print('原列表：',lst2)
+
+#升序排序
+lst2.sort()
+print('升序：',lst2)  #先排大写字母
+
+#降序排序
+lst2.sort(reverse=True)
+print('降序：',lst2)  #先排小写
+
+#忽略大小写
+lst2.sort(key=str.lower)
+print('默认升序：',lst2)

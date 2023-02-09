@@ -22,3 +22,13 @@ print(lst)
 print('-------------为指定的切片赋予一个新值------------------')
 lst[1:3]=[300,400,500,600]#把1-3的位置用[300,400,500,600]替换
 print(lst)
+
+
+#反向输出
+lst.reverse()
+print(lst)
+
+#列表的拷贝
+new_lst=lst.copy()
+print(lst,id(lst))
+print(new_lst,id(new_lst)) #产生新的列表对象

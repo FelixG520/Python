@@ -21,3 +21,10 @@ print(lst2.index('hello'))
 #print(lst2.index('python'))         #如果查询的元素在列表中不存在，则会抛出ValueError
 #print(lst2.index('hello',1,3))      #还可以在指定的start和stop之间进行查找,ValueError: 'hello' is not in list
 print(lst2.index('hello',1,4))       #还可以在指定的start和stop之间进行查找
+
+s='hell0world'
+for i in range(0,len(s)):
+    print(i,s[i])
+
+for i in range(-10,0):
+    print(i,s[i])
