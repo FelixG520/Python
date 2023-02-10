@@ -16,3 +16,33 @@
        '''
 
 
+t=('hello',[10,20,30],'python','world')
+print(t)
+
+t=tuple('helloworld')
+print(t)
+
+t=tuple([10,20,30,40])
+print(t)
+
+t=tuple(range(1,10))
+print(t)
+
+#元组的相关操作
+print('10在元组中是否存在：',(10 in t))
+print('10在元组中不存在：',(10 not in t))
+print('max:',max(t))
+print('min:',min(t))
+print('len:',len(t))
+print('t.index:',t.index(1))
+print('t.count:',t.count(3))
+
+x=(10)
+print(x,type(x))
+
+y=(10,) #元组只有一个元素，逗号不能省
+print(y,type(y))
+
+#元组的删除
+del t
+print(t)

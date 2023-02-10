@@ -17,6 +17,10 @@
    第二个price：自定义表示value的变量
    zip(items,prices)：可迭代对象
   '''
+import random
+
+d={item:random.randint(1,100) for item in range(4)}
+print(d)
 
 #表达式 for 元素1，元素2  in zip(列表1，列表2)
 items=['Fruits','Books','Others']

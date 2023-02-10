@@ -21,4 +21,6 @@ print(scores)
 scores['陈六']=100    #修改元素
 print(scores)
 
-
+#清空字典中的所有元素
+scores.clear()
+print(scores)

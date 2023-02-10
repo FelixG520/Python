@@ -12,8 +12,20 @@ print(t[1])
 print(t[2])
 #print(t[3])       IndexError: tuple index out of range   超出元组范围
 
+#元组支持切片操作
+t2=t[0:3:2]
+print(t2)
 
 print('-------------遍历元组---------------')
 for item in t:
     print(item)
 
+for i in range(len(t)):
+    print(i,t[i])
+
+#使用enumerate()
+for index,item in enumerate(t):
+    print(index,'--->',item)
+
+for index,item in enumerate(t,10):
+    print(index,'--->',item)

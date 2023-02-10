@@ -15,3 +15,5 @@ for item in scores:
     print(item,scores[item],scores.get(item))
 
 
+for key,value in scores.items():
+    print(key,value)
