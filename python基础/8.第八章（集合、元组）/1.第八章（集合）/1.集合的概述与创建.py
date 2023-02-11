@@ -17,7 +17,11 @@
           print(set('Python'))
           print(set({124,3,4,4,5}))
           print(set())
-
+集合
+-Python中的集合与数学中集合的概念一致
+- 集合可分为可变集合set与不可变集合frozenset-集合与字典中的key一致都是无序的
+- 集合中的元素要求唯一
+- 集合中只能存储不可变数据类型(字符串、整数、浮点数、元组)-集合使用分定义，元素之间使用逗号进行分隔
 
 完全等价数学中的集合
 和列表本质上是无序性，列表是有序的
@@ -51,3 +55,11 @@ s6={}
 print(type(s6))        #<class 'dict'>字典类型，不能直接用{}
 s7=set()
 print(s7,type(s7))     #<class 'set'>
+
+#序列操作
+print('max:',max(s))
+print('min:',min(s))
+print('len:',len(s))
+print('9在集合中是否存在？',(9 in s))
+print('9在集合中是否不存在？',(9 not in s))
+

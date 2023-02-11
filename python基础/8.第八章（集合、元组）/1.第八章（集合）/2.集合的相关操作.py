@@ -56,4 +56,9 @@ print(a)
 a.clear()           #清空集合
 print(a)
 
-del a
+#del a
+#print(a)
+
+b={88,945,456,54,56,564,12,35,3351}
+for index,item in enumerate(b):
+    print(index,'--->',item)
