@@ -50,3 +50,25 @@ print('---------------isalnum()  判断指定字符串是否全部由字母和�
 print('15.','abc1'.isalnum())    #Ture
 print('16.','张三123'.isalnum())  #Ture
 print('17.','abc!'.isalnum())    #False    '!'不属于字母和数字
+
+print('Helloworld'.islower())  #判断是不是都是小写字母
+print('helloworld'.islower())  #判断是不是都是小写字母
+print('hello你好'.islower())
+
+print('Helloworld'.isupper()) #判断是不是都是大写字母
+print('HELLOWORLD'.isupper()) #判断是不是都是大写字母
+print('HELLO你好'.isupper())
+
+print('Hello'.istitle()) #判断是否首字母大写
+
+print('\t'.isspace()) #判断是否都是空白字符
+print('   '.isspace()) #判断是否都是空白字符
+
+
+
+
+
+print(s.startswith('h'))#是否以H开头
+print(s.startswith('P'))#是否以P开头
+print('demo.py'.endswith('.py'))
+print('demo.txt'.endswith('.txt'))
