@@ -58,3 +58,55 @@ print(' '.join(t))
 
 
 print('*'.join('Python'))    #字符串
+
+'''
+数据的处理
+-字符串的拼接
+    ·使用”+”进行拼接字符串
+    ·使用str.join()方法进行拼接字符串
+    ·直接拼接
+    ·使用格式化字符串进行拼接
+-字符串去重
+-列表元素去重
+'''
+s1='hello'
+s2='world'
+#(1)使用+进行连接
+print(s1+s2)
+
+
+#(2)使用join方法
+print(''.join(['hello','world']))
+print('*'.join(['Hello','Wrold','Python','JAVA','PHP']))
+print('你好'.join(['Hello','Wrold','Python','JAVA','PHP']))
+
+#(3)直接拼接
+print('hello','world')
+
+#(4)使用格式化字符串
+print('%s%s' % (s1,s2))
+print(f'{s1}{s2}')
+print('{0}{1}'.format(s1,s2))
+
+
+#去重
+a='helloworldhellowefdaldadlgwaniodiedjsf'
+#(1)字符串的拼接和not in
+new_a=''
+for item in a:
+    if item not in new_a:#判断a中的每个字符在new_s中是否存在
+        new_a+=item
+print(new_a)
+
+#(2)使用索引+not in
+new_a2=''
+for i in range(len(a)):
+    if a[i] not in new_a2:
+        new_a2+=a[i]
+print(new_a2)
+
+#(3)通过集合去重（无序）+列表的排序
+new_a3=set(a)  #结果是集合类型
+lst=list(new_a3) #转成列表类型
+lst.sort(key=a.index) #将原字符串中的索引作为关键字进行排序
+print(''.join(lst))
