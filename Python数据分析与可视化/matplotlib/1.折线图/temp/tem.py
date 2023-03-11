@@ -14,7 +14,7 @@ from matplotlib import font_manager
 #               weight="bold"
 #               )
 
-#另外一种设置字体的大小的方式
+#另外一种设置字体的方式
 my_font = font_manager.FontProperties(fname="C:WINDOWS\FONTS\MSYH.TTC")
 
 
