@@ -23,7 +23,7 @@ c = request('www.baidu.com')
 #
 # print(task)
 
-#future的使用
+# #future的使用
 # loop = asyncio.get_event_loop()
 # task = asyncio.ensure_future(c)
 # print(task)

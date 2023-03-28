@@ -1,47 +1,95 @@
 import requests
 from lxml import etree
-import re
+import random
+import os
 from multiprocessing.dummy import Pool
-#需求：爬取梨视频的视频数据
-headers = {
-    'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
-}
-#原则：线程池处理的是阻塞且较为耗时的操作
 
-#对下述url发起请求解析出视频详情页的url和视频的名称
-url = 'https://www.pearvideo.com/category_5'
-page_text = requests.get(url=url,headers=headers).text
+if __name__ == '__main__':
+    # 生成一个存视频的文件夹
+    if not os.path.exists('./video'):
+        os.mkdir('./video')
 
-tree = etree.HTML(page_text)
-li_list = tree.xpath('//ul[@id="listvideoListUl"]/li')
-urls = [] #存储所有视频的链接and名字
-for li in li_list:
-    detail_url = 'https://www.pearvideo.com/'+li.xpath('./div/a/@href')[0]
-    name = li.xpath('./div/a/div[2]/text()')[0]+'.mp4'
-    #对详情页的url发起请求
-    detail_page_text = requests.get(url=detail_url,headers=headers).text
-    #从详情页中解析出视频的地址（url）
-    ex = 'srcUrl="(.*?)",vdoUrl'
-    video_url = re.findall(ex,detail_page_text)[0]
-    dic = {
-        'name':name,
-        'url':video_url
+    url = 'https://www.pearvideo.com/category_5'
+    headers = {
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54"
     }
-    urls.append(dic)
-#对视频链接发起请求获取视频的二进制数据，然后将视频数据进行返回
-def get_video_data(dic):
-    url = dic['url']
-    print(dic['name'],'正在下载......')
-    data = requests.get(url=url,headers=headers).content
-    #持久化存储操作
-    with open(dic['name'],'wb') as fp:
-        fp.write(data)
-        print(dic['name'],'下载成功！')
-#使用线程池对视频数据进行请求（较为耗时的阻塞操作）
-pool = Pool(4)
-pool.map(get_video_data,urls)
+    # proxies={'https': '62.210.38.37:3838'} 代理ip，用了太慢
+    response = requests.get(url=url, headers=headers)
+    page_text = response.text
 
-pool.close()
-pool.join()
+    tree = etree.HTML(page_text)
+    li_list = tree.xpath('//*[@id="listvideoListUl"]/li')
+
+    urls = []  # 储存所有视频的连接和名字
+    for li in li_list:
+        new_url = 'https://www.pearvideo.com/' + li.xpath('./div/a/@href')[0]
+        new_name = li.xpath('./div/a/div[2]/text()')[0] + '.mp4'
+        # 这个方法行不通。因为mp4是动态加载出来的，因此需要抓包ajax请求中的url，不知道怎么用python抓包，用浏览器的抓包工具
+        new_page_text = requests.get(url=new_url, headers=headers).text
+        new_tree = etree.HTML(new_page_text)
+        name = new_tree.xpath('//*[@id="detailsbd"]/div[1]/div[2]/div/div[1]/h1/text()')[0]
+        # print(name)
+
+        # 通过抓包ajax得到一个可以发送的url和请求伪装的视频的url，
+        id_ = str(li.xpath('./div/a/@href')[0]).split('_')[1]
+        # 可发送请求的url
+        ajax_url = 'https://www.pearvideo.com/videoStatus.jsp?'
+        params = {
+            'contId': id_,
+            'mrd': str(random.random())
+        }
+        ajax_headers = {
+            "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54',
+            'Referer': 'https://www.pearvideo.com/video_' + id_
+        }
+        # 加了'Referer': 'https://www.pearvideo.com/video_1708144'后就不会显示该视频已下架了
+        dic_obj = requests.get(url=ajax_url, params=params, headers=ajax_headers).json()
+        video_url = dic_obj["videoInfo"]['videos']["srcUrl"]
+
+        # 此处视频地址做了加密即ajax中得到的地址需要加上cont-,并且修改一段数字为id才是真地址
+        # 真地址："https://video.pearvideo.com/mp4/third/20201120/cont-1708144-10305425-222728-hd.mp4"
+        # 伪地址："https://video.pearvideo.com/mp4/third/20201120/1606132035863-10305425-222728-hd.mp4"
+
+        # 得到真url,做字符串处理
+        video_true_url = ''
+        s_list = str(video_url).split('/')
+        # print(s_list)
+        for i in range(0, len(s_list)):
+            if i < len(s_list) - 1:
+                video_true_url += s_list[i] + '/'
+            else:
+                ss_list = s_list[i].split('-')
+                # print(ss_list)
+                for j in range(0, len(ss_list)):
+                    if j == 0:
+                        video_true_url += 'cont-' + id_ + '-'
+                    elif j == len(ss_list) - 1:
+                        video_true_url += ss_list[j]
+                    else:
+                        video_true_url += ss_list[j] + '-'
+        # print(video_true_url)
+
+        dic = {
+            'name': name,
+            'url': video_true_url
+        }
+        urls.append(dic)
+
+    # 使用线程池对视频数据进行请求(较为耗时的阻塞操作)
+    def get_video_data(dic_):
+        url_ = dic_['url']
+        print(dic_['name'], '正在下载.....')
+        video_data = requests.get(url=url_, headers=headers).content
+        video_path = './video/' + dic_['name']
+        with open(video_path, 'wb') as fp:
+            fp.write(video_data)
+            print(dic_['name'], '下载成功!!!!!')
+
+
+    pool = Pool(4)
+    pool.map(get_video_data, urls)
+
+    pool.close()
+    pool.join()
 
 

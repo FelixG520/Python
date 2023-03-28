@@ -172,7 +172,7 @@ else:
 
 ```
 
-##### python2.x
+#### python2.x
 
 ```python
 import httplib, mimetypes, urlparse, json, time
