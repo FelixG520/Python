@@ -335,6 +335,3 @@ end = time.time()
 print('总耗时:',end-start)
 ```
 
-selenium模块的基本使用
-
-便捷的获取网站中动态加载的数据 
