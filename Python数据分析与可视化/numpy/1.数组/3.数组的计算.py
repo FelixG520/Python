@@ -89,3 +89,4 @@ print(t5-t8)
 t9=np.array(10);
 print(t9)
 print(t5-t9) #报错，行列都不一样，无法计算
+
